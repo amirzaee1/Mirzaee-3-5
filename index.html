@@ -1,0 +1,98 @@
+
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>۳×۵ | معجزه‌ی جذب آگاهانه</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Vazirmatn', sans-serif;
+      background: linear-gradient(135deg, #001f3f 0%, #000000 100%); /* Darker, more cinematic base */
+      color: #e0e0e0; /* Light gray for text, good contrast on dark */
+    }
+    .font-estedad { /* Fallback for Estedad */
+      font-family: 'Vazirmatn', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; /* Using Vazirmatn bold as display font */
+      font-weight: 700;
+    }
+    .font-vazir {
+      font-family: 'Vazirmatn', sans-serif;
+    }
+    .gold-text {
+      color: #FFD700; /* Standard gold */
+    }
+    .gold-border {
+      border-color: #FFD700;
+    }
+    .button-glow {
+      box-shadow: 0 0 15px #FFD700, 0 0 25px #FFD700, 0 0 35px #bb6bd9;
+      transition: box-shadow 0.3s ease-in-out;
+    }
+    .button-glow:hover {
+      box-shadow: 0 0 25px #FFD700, 0 0 35px #FFD700, 0 0 45px #bb6bd9, 0 0 5px #00d4ff;
+    }
+    .breathing-animation {
+      animation: breathing 3s ease-in-out infinite;
+    }
+    @keyframes breathing {
+      0%, 100% { transform: scale(1); box-shadow: 0 0 15px #FFD700, 0 0 25px #bb6bd9; }
+      50% { transform: scale(1.03); box-shadow: 0 0 25px #FFD700, 0 0 35px #bb6bd9, 0 0 5px #00d4ff; }
+    }
+    .gradient-animated-bg {
+      background: linear-gradient(120deg, #00d4ff, #bb6bd9, #00d4ff);
+      background-size: 200% 200%;
+      animation: gradientShift 10s ease infinite;
+    }
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    .particle {
+      position: absolute;
+      background-color: rgba(255, 215, 0, 0.7); /* Gold particles */
+      border-radius: 50%;
+      opacity: 0;
+      animation: float 10s infinite ease-in-out;
+      box-shadow: 0 0 5px rgba(255, 215, 0, 0.8), 0 0 10px rgba(255, 215, 0, 0.5);
+    }
+    @keyframes float {
+      0% { transform: translateY(0px) translateX(0px) scale(0.5); opacity: 0; }
+      25% { opacity: 0.7; }
+      50% { transform: translateY(-20px) translateX(10px) scale(1); opacity: 0.5; }
+      75% { opacity: 0.7; }
+      100% { transform: translateY(0px) translateX(0px) scale(0.5); opacity: 0; }
+    }
+    .typing-effect::after {
+      content: '|';
+      animation: blink 0.7s infinite;
+    }
+    @keyframes blink {
+      50% { opacity: 0; }
+    }
+  </style>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.1.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.1.0/",
+    "react/": "https://esm.sh/react@^19.1.0/",
+    "react-router-dom": "https://esm.sh/react-router-dom@^7.6.2",
+    "lucide-react": "https://esm.sh/lucide-react@^0.522.0",
+    "@google/genai": "https://esm.sh/@google/genai@^1.6.0",
+    "recharts": "https://esm.sh/recharts@^2.15.4"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body class="font-vazir">
+  <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
